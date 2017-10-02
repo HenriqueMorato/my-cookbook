@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: recipes
+#
+#  id          :integer          not null, primary key
+#  title       :string
+#  recipe_type :string
+#  difficulty  :string
+#  cook_time   :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  ingredients :text
+#  method      :text
+#  cuisine_id  :integer
+#
+
 class Recipe < ApplicationRecord
   validates :title, presence: true
   validates :recipe_type, presence: true
