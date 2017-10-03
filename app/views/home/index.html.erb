@@ -15,3 +15,7 @@
 <% @cuisines.each do |cuisine| %>
   <li><%= link_to cuisine.name, cuisine %></li>
 <% end %>
+
+<% @recipe_types.each do |recipe_type| %>
+  <li><%= link_to recipe_type.name, recipe_type %></li>
+<% end %>

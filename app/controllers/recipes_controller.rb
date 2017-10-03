@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @cuisines = Cuisine.all
-    @recipe_type = RecipeType.all
+    @recipe_types = RecipeType.all
   end
 
   def create
@@ -17,7 +17,7 @@ class RecipesController < ApplicationController
       redirect_to recipe_url(@recipe)
     else
       flash[:error] = 'Você deve informar todos os dados da receita'
-      @recipe_type = RecipeType.all      
+      @recipe_types = RecipeType.all      
       @cuisines = Cuisine.all
       render :new
     end
