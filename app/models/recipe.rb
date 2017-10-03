@@ -2,16 +2,16 @@
 #
 # Table name: recipes
 #
-#  id          :integer          not null, primary key
-#  title       :string
-#  recipe_type :string
-#  difficulty  :string
-#  cook_time   :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  ingredients :text
-#  method      :text
-#  cuisine_id  :integer
+#  id             :integer          not null, primary key
+#  title          :string
+#  difficulty     :string
+#  cook_time      :integer
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  ingredients    :text
+#  method         :text
+#  cuisine_id     :integer
+#  recipe_type_id :integer
 #
 
 class Recipe < ApplicationRecord
@@ -23,4 +23,5 @@ class Recipe < ApplicationRecord
   validates :ingredients, presence: true
   validates :method, presence: true
   belongs_to :cuisine
+  belongs_to :recipe_type
 end
