@@ -6,11 +6,5 @@
 <% end %>
 
 <% @recipe_type.recipes.each do |recipe| %>
-  <h1><%= recipe.title %></h1>
-  <ul>
-    <li><%= recipe.recipe_type.name %></li>
-    <li><%= recipe.cuisine.name %></li>
-    <li><%= recipe.difficulty %></li>
-    <li><%= recipe.cook_time %> minutos</li>
-  </ul>
+  <%= render recipe %>
 <% end %>
